@@ -90,7 +90,7 @@ class RttsMod(loader.Module):
 
                 response = conv.wait_event(events.NewMessage(incoming=True,
 
-                                                             from_users=613929575))
+                                                             from_users=616484527))
 
                 if not self_mess:
 
