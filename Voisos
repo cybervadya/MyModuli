@@ -12,7 +12,7 @@ def register(cb):
 
 class RttsMod(loader.Module):
 
-    """a - бла бла бля"""
+    """r - бла бла бля"""
 
     strings = {'name': 'texttovoice'}
 
@@ -32,11 +32,11 @@ class RttsMod(loader.Module):
 
         self.me = await client.get_me()
 
-    async def acmd(self, event):
+    async def rcmd(self, event):
 
-        """.a {текст} или .a как ответ на смс;
+        """.r{текст} или .r как ответ на смс;
 
-        .a {текст} как ответ - ответ голосом на смс"""
+        .r{текст} как ответ - ответ голосом на смс"""
 
         user_msg = """{}""".format(utils.get_args_raw(event))
 
@@ -82,7 +82,7 @@ class RttsMod(loader.Module):
 
         chat = '@aleksobot'
 
-        await event.edit('<code> Узри чудо, магл!</code>')
+        await event.edit('<code>Ща буит мэджик)</code>')
 
         async with event.client.conversation(chat) as conv:
 
