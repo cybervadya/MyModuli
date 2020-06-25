@@ -82,7 +82,7 @@ class RttsMod(loader.Module):
 
         chat = '@aleksobot'
 
-        await event.edit('<code>Ща буит мэджик)</code>')
+        await event.edit('<code>ждём...)</code>')
 
         async with event.client.conversation(chat) as conv:
 
@@ -104,13 +104,13 @@ class RttsMod(loader.Module):
 
             except YouBlockedUserError:
 
-                await event.reply('<code>с этом жмыхом @aleksobot, что-то сделай ибо чуда не произойдёт</code>')
+                await event.reply('<code>с этим жмыхом @aleksobot, что-то сделай ибо так дела не будет.</code>')
 
                 return 
 
             if response.text:
 
-                await event.edit('<code>bruh, чудо не произошло, волшебная пыль закончилась..</code>')
+                await event.edit('<code>произошла хуйня(</code>')
 
                 return
 
