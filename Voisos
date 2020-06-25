@@ -8,11 +8,11 @@ from .. import loader, utils
 
 def register(cb):
 
-    cb(RttsMod())
+    cb(Voice())
 
 class RttsMod(loader.Module):
 
-    """r - бла бла бля"""
+    """.v - бла бла бля"""
 
     strings = {'name': 'Текст в речь'}
 
