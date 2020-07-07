@@ -14,7 +14,7 @@ class AllMod(loader.Module):
     strings = {"name":"Техника Призыва"}
 
     async def allcmd(self, message):
-await client.message.delete()
+await client.message.delete(message)
 all = client.iter_participants(message.to_id)
 chunk = []
 async for user in all:
