@@ -1,0 +1,42 @@
+def register(cb):
+
+	cb(urge())
+
+@loader.tds
+
+class urge(loader.Module):
+
+	"""Призывает всех лохов в группе"""
+
+	strings = {
+
+		"name": "Техника призыва"
+
+	}
+
+	async def client_ready(self, client, db):
+
+		self.client = client
+
+	
+
+	
+
+	@loader.sudo
+
+	async def allcmd(self, message):
+await message.delete()
+all = client.iter_participants(message.to_id)
+chunk = []
+async for user in all:
+ if not user.deleted:
+  name = f"{user.first_name} {user.last_name}" if user.last_name else user.first_name
+  name = name.replace("<","&lt;").replace(">","&gt;")
+  name = name[:30]+"..." if len(name) > 33 else name
+  tag = f'<a href="tg://user?id={user.id}">•{name}</a>'
+  chunk.append(tag)
+ if len(chunk) == 100:
+     await message.client.send_message(message.to_id, "\n".join(chunk))
+     chunk = []
+if len(chunk) != 0:
+ await message.client.send_message(message.to_id, "\n".join(chunk))
