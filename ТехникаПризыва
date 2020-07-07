@@ -13,7 +13,6 @@ class AllMod(loader.Module):
     strings = {"name":"TagAll"}
 
     async def allcmd(self, message):
-await message.delete()
 all = client.iter_participants(message.to_id)
 chunk = []
 async for user in all:
