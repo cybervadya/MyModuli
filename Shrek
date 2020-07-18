@@ -51,7 +51,7 @@ class SoglasenMod(loader.Module):
 		W, H = img.size
 		txt = txt.replace("\n", "𓃐𓃐")
 		text = "\n".join(wrap(txt, 40))
-		t = "Согласен, зря " +text
+		t = 'Согласен, зря ' +text
 		t = t.replace("𓃐𓃐","\n")
 		draw = ImageDraw.Draw(img)
 		font = ImageFont.truetype(io.BytesIO(f), 32, encoding='UTF-8')
