@@ -42,7 +42,7 @@ class SoglasenMod(loader.Module):
 
 
 		await message.edit("<b>Извиняюсь...</b>")
-		pic = requests.get("https://drive.google.com/file/d/15k3En4Z-KQqe4YVQWRWISx6imPXrDDqv/view?usp=drivesdk")
+		pic = requests.get("https://www.meme-arsenal.com/memes/df957d32337ad187e26a4ff3060bf49f.jpg")
 		pic.raw.decode_content = True
 		img = Image.open(io.BytesIO(pic.content)).convert("RGB")
 		black = Image.new("RGBA", img.size, (0, 0, 0, 100))
