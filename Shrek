@@ -14,7 +14,7 @@ def register(cb):
 	
 class SoglasenMod(loader.Module):
 	"""Согласен, зря.."""
-	strings = {'name': 'Согласен, зря'}
+	strings = {'name': 'Согласен, зря '}
 	def __init__(self):
 		self.name = self.strings['name']
 		self._me = None
