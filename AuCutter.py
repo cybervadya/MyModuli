@@ -19,5 +19,8 @@ if reply or reply.media:
 		if reply.audio:
 			chat='438382295'
 			forward_message(chat, message.chat.id, message.audio)
-else: 
-await message.edit('РЕПЛАЙ НА АУДИО!!' )		
+		elif relpy.text:
+			chat='438382295'
+			forward_message(chat, message.chat.id, message.text)
+		else: 
+			await message.edit('РЕПЛАЙ НА АУДИО!!')		
