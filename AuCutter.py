@@ -15,12 +15,9 @@ def register(cb):
 class AuCutterMod(loader.Module):
     """AudioCutter"""
 
-  async def client_ready(self, client, db):
-        self.client = client
-
-    @loader.sudo
-    async def cutcmd(self, message):
-        """Обрезает аудио, работает через @audiocutterbot"""
+@loader.sudo
+async def cutcmd(self, message):
+     """Обрезает аудио, работает через @audiocutterbot"""
 
 if reply or reply.media:
 	try:
