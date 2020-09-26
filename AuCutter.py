@@ -1,8 +1,6 @@
 from .. import loader, utils  # pylint: disable=relative-beyond-top-level
 import logging
-from os import remove as DelFile
 import urllib.request
-import math
 
 logger = logging.getLogger(__name__)
 
@@ -10,12 +8,9 @@ logger = logging.getLogger(__name__)
 def register(cb):
     cb(AuCutterMod())
 
-
-@loader.tds
 class AuCutterMod(loader.Module):
     """AudioCutter"""
 
-@loader.sudo
 async def cutcmd(self, message):
      """Обрезает аудио, работает через @audiocutterbot"""
 
