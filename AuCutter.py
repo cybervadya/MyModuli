@@ -14,13 +14,8 @@ class AuCutterMod(loader.Module):
 async def cutcmd(self, message):
      """Обрезает аудио, работает через @audiocutterbot"""
 
-if reply or reply.media:
-	try:
-		if reply.audio:
-			chat='438382295'
-			forward_message(chat, message.chat.id, message.audio)
-		elif relpy.text:
-			chat='438382295'
-			forward_message(chat, message.chat.id, message.text)
-		else: 
-			await message.edit('РЕПЛАЙ НА АУДИО!!')		
+if reply.audio:
+	chat='438382295'
+	forward_message(chat, message.chat.id, message.audio)
+else: 
+	await message.edit('РЕПЛАЙ НА АУДИО!!')		
