@@ -20,4 +20,4 @@ if reply or reply.media:
 			chat='438382295'
 			forward_message(chat, message.chat.id, message.audio)
 else: 
-	await message.edit('РЕПЛАЙ НА АУДИО!!' )		
+await message.edit('РЕПЛАЙ НА АУДИО!!' )		
